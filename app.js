@@ -5,7 +5,12 @@
     o novo array no console.
 */
 
-const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
+const randomNumbers = [10, 30, 15, 25, 50, 40, 5];
+
+const impares = randomNumbers.filter(num => num % 2 === 1);
+
+console.log(impares);
+
 
 /*
   02
@@ -15,6 +20,14 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
+var soma = 0;
+const sum = crazyNumbers.map(num => {
+  if (num < 501) {
+    soma += num;
+  }
+});
+
+console.log(soma)
 /*
   03
 
@@ -24,6 +37,9 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 
 const numbers = [5, 7, 3]
 
+const newArray = numbers.map(num => Math.pow(num, 2))
+
+console.log(newArray);
 /*
   04
 
@@ -45,6 +61,9 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
+const segment = tarantinoMovies.filter(filmes => filmes.release < 2000);
+
+console.log(segment);
 /*
   05
 
@@ -62,6 +81,11 @@ const tvShows = [
   { name: 'Watchmen', releaseYear: 2019 }
 ]
 
+const movieNames = tvShows.map(movie => { 
+  return movie.name;
+});
+
+console.log(movieNames);
 /*
   06
 
@@ -81,6 +105,9 @@ const cart = [
   { name: 'Death Stranding', price: 149.99 }
 ]
 
+cart.map(x => {
+  console.log(`Nome do jogo: ${x.name} \nPreço: R$${x.price}`);
+})
 /*
   - Nome 1
   - Nome 2
